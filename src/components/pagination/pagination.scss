@@ -1,0 +1,47 @@
+@import '../../common/main.scss';
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  cursor: pointer;
+  margin-top: 15px;
+
+  @media screen and (max-width: $MaxMobileWidth) {
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 290px;
+  }
+
+  @media screen and (min-width: $MaxMobileWidth) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $DesktopWidth) {
+    margin-left: 69px;
+  }
+}
+
+.pagination a {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #6c7ac9;
+  color: #6c7ac9;
+}
+
+.pagination li {
+  @media screen and (min-width: $MaxMobileWidth) {
+    margin-left: 10px;
+  }
+}
+
+.pagination__link--active a {
+  color: #fff;
+  background: #6c7ac9;
+}
+
+.pagination__link--disabled a {
+  color: rgb(198, 197, 202);
+  border: 1px solid rgb(198, 197, 202);
+}

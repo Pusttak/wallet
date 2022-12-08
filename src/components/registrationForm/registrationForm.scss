@@ -1,0 +1,205 @@
+@import '../../common/main.scss';
+
+.form {
+  @media screen and (min-width: $MobileWidth) {
+    width: 320px;
+    height: auto;
+    padding-top: 110px;
+    padding-bottom: 110px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: $MaxMobileWidth) {
+    position: absolute;
+    bottom: 48px;
+    right: 50%;
+    transform: translate(50%);
+    width: 540px;
+    border-radius: 20px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    margin: auto;
+  }
+  @media screen and (min-width: $DesktopWidth) {
+    bottom: 50%;
+    right: 85px;
+    transform: translateY(50%);
+    margin: 0;
+  }
+
+  background-color: var(--primary-background-color);
+  box-shadow: 0px 10px 60px rgba(170, 178, 197, 0.2);
+}
+.form-login {
+  @media screen and (min-width: $MobileWidth) {
+    width: 320px;
+    height: auto;
+    padding-top: 110px;
+    padding-bottom: 110px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: $MaxMobileWidth) {
+    position: absolute;
+    bottom: 196px;
+    right: 50%;
+    transform: translate(50%);
+    width: 540px;
+    border-radius: 20px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    margin: auto;
+  }
+  @media screen and (min-width: $DesktopWidth) {
+    bottom: 50%;
+    right: 85px;
+    transform: translateY(50%);
+    margin: 0;
+  }
+
+  background-color: var(--primary-background-color);
+  box-shadow: 0px 10px 60px rgba(170, 178, 197, 0.2);
+}
+
+.logo_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.container_google {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-bottom: 15px;
+}
+
+.text {
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+
+  font-family: 'Circe';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+
+  color: var(--placeholder-text);
+  text-align: center;
+}
+
+.container_input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding-left: 12.5px;
+  padding-right: 12.5px;
+
+  @media screen and (min-width: $MaxMobileWidth) {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+}
+
+.form-field {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.input {
+  border: none;
+  outline-style: none;
+  padding-left: 25px;
+  width: 250px;
+  height: 35px;
+
+  font-family: 'Circe';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+
+  @media screen and (min-width: $TabletWidth) {
+    width: 409px;
+  }
+}
+
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label {
+  transform: translateY(-40px);
+}
+
+.button_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.passwordWrapper{
+  position: relative;
+}
+
+// .passwordChecking{
+//   display: block;
+//   position: relative;
+//   top: 5px;
+//   height: 4px;
+//   width: 1%;
+//   border: 3px solid transparent;
+//   background-color: transparent;
+//   border-radius: 4px;
+//   right: 100px;
+// }
+
+.lowPasswordQuality {
+  position: absolute;
+  transition: 0.4s;
+  border: 3px solid rgb(198, 33, 21);
+  background-color: rgb(198, 33, 21);
+  @media screen and (min-width: 320px) {
+    // top: 365px;
+    top: 30px;
+    width: 290px;
+  }
+
+  @media screen and (min-width: 768px) {
+    // top: 275px;
+    top: 30px;
+    width: 100%;
+  }
+}
+
+.middlePasswordQuality {
+  position: absolute;
+  transition: 1.5s;
+  border: 3px solid rgb(234, 199, 124);
+  background-color: rgb(234, 199, 124);
+  @media screen and (min-width: 320px) {
+    top: 30px;
+    width: 290px;
+  }
+  @media screen and (min-width: 768px) {
+    top: 30px;
+    width: 100%;
+  }
+}
+
+.strongPasswordQuality {
+  position: absolute;
+  transition: 1.5s;
+  border: 3px solid #24cca7;
+  background-color: #24cca7;
+
+  @media screen and (min-width: 320px) {
+    top: 30px;
+    width: 290px;
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 30px;
+    width: 100%;
+  }
+}
